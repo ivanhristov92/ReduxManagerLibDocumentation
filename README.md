@@ -1,4 +1,4 @@
-This is the documentation site for ReduxManagerLib. It is made with gatsby.
+This is the documentation site for ReduxManagerLib. It is made with gatsby. See it live here: http://aboriginal-joke.surge.sh
 
 # What is ReduxManagerLib?
 
