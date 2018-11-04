@@ -28,7 +28,21 @@ class Page extends React.Component  {
                         <div className="doc-body row">
                             <div className="doc-content col-md-9 col-12 order-1">
                                 <div className="content-inner">
-
+                                    <section className="doc-section">
+                                        <h2 className="section-title">{pageTitle}</h2>
+                                        <div className="section-block">
+                                            <div className="row">
+                                                <div className="col-md-12 col-12">
+                                                    <ul className="list no-anchor-padding-list">
+                                                        <li><Link className="nav-link" to="api-reference-actionTypesFactory">actionTypesFactory</Link></li>
+                                                        <li><Link className="nav-link" to="api-reference-actionCreatorsFactory">actionCreatorsFactory</Link></li>
+                                                        <li><Link className="nav-link" to="api-reference-reducerFactory">reducerFactory</Link></li>
+                                                        <li><Link className="nav-link" to="api-reference-selectorsFactory">selectorsFactory</Link></li>
+                                                    </ul>
+                                                </div>
+                                            </div>{/*//row*/}
+                                        </div>{/*//section-block*/}
+                                    </section>{/*//doc-section*/}
 
                                 </div>
                                 {/*//content-inner*/}

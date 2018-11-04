@@ -6,8 +6,11 @@ import Sidenav from '../components/sidenav';
 import Code from '../components/code';
 import BottomNavigation from '../components/bottom-navigation';
 
+import image1 from "../../assets/images/data-flow.png";
+import image2 from "../../assets/images/data-flow-example.png";
 
 const pageTitle = "";
+
 
 class Page extends React.Component  {
 
@@ -33,14 +36,14 @@ class Page extends React.Component  {
                                             <h2>General flow</h2>
                                             <p>This is more general overview of the dataflow, meant to introduce you to the flow. More details will be present in the second diagram.</p>
                                             <div className="text-center">
-                                                <img src="assets/images/data-flow.png" />
+                                                <img src={image1} />
                                             </div>
                                         </div>
                                         <div className="section-block overflow-scroll">
                                             <h2>Concrete example</h2>
                                             <p>In this version, a concret BlogPost model is used to illustrate more descriptively where data flows and in what form.</p>
                                             <div>
-                                                <img src="assets/images/data-flow-example.png" />
+                                                <img src={image2} />
                                             </div>
                                         </div>
                                     </section>
