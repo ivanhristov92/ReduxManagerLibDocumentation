@@ -28,7 +28,46 @@ class Page extends React.Component  {
                         <div className="doc-body row">
                             <div className="doc-content col-md-9 col-12 order-1">
                                 <div className="content-inner">
+                                    <section className="doc-section">
+                                        <h2 className="section-title">{pageTitle}</h2>
+                                        <div className="section-block">
+                                            <Code className="language-flow" code={`
+// Flow Annotations
 
+import { RMLActionTypes } from "./crud-action-types.flow";
+import { RMLAction } from "./crud-action-creators.flow";
+import { NormalizedData } from "./crud-rest-api.flow";
+
+export type RMLOperationState = "IDLE" | "LOADING" | "SUCCESS" | "FAILURE";
+
+export type RMLOperationStates = {
+  create: RMLOperationState,
+  read: RMLOperationState,
+  update: RMLOperationState,
+  delete: RMLOperationState
+};
+
+export type RMLState = {
+  byId: NormalizedData,
+  error: ?Error
+} & RMLOperationStates & { [additionalState: string]: any };
+
+export type RMLReducer = (state: RMLState, action: RMLAction) => RMLState;
+
+export type RMLReducerFactoryOptions = {
+  additional?: {
+    [SOME_ACTION: string]: RMLReducer
+  },
+  customErrorHandler?: (error: Error, details?: Object) => RMLState
+};
+
+export type RMLReducerFactory = (
+  actionTypes: RMLActionTypes,
+  options: RMLReducerFactoryOptions
+) => RMLReducer;
+                                            `} />
+                                        </div>{/*//section-block*/}
+                                    </section>{/*//doc-section*/}
 
                                 </div>
                                 {/*//content-inner*/}

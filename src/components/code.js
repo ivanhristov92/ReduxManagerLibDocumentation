@@ -3,8 +3,10 @@ import React from "react";
 export default class Code extends React.Component {
 
     componentDidMount(){
-
-        window.Prism.highlightElement(this.code);
+        try {
+            window.Prism.highlightElement(this.code);
+        } catch (e){
+        }
     }
 
     render (){

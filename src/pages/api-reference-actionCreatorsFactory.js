@@ -28,7 +28,53 @@ class Page extends React.Component  {
                         <div className="doc-body row">
                             <div className="doc-content col-md-9 col-12 order-1">
                                 <div className="content-inner">
+                                    <section className="doc-section">
+                                        <h2 className="section-title">{pageTitle}</h2>
+                                        <div className="section-block">
+                                            <Code className="language-flow" code={`
+// Flow Annotations
 
+import type { RMLActionTypes } from "./crud-action-types.flow";
+import type {
+  RMLRestClientInstance,
+  RMLPayloadExpectedByRestClient
+} from "./crud-rest-api.flow";
+
+export type RMLAction = {
+  type: string,
+  payload?: any,
+  error?: ?Error
+};
+
+export type RMLActionCreator = (
+  payload: RMLPayloadExpectedByRestClient
+) => RMLAction | void;
+
+export type RMLActionCreators = {
+  create: RMLActionCreator,
+  read: RMLActionCreator,
+  update: RMLActionCreator,
+  delete: RMLActionCreator,
+  [someActionCreator: string]: RMLActionCreator
+};
+
+export type RMLActionCreatorsOptions = {
+  additional?: {
+    [someActionCreator: string]: RMLActionCreator
+  },
+  customErrorHandler?: (error: Error, details?: Object) => void
+};
+
+export type RMLActionCreatorsFacroty = (
+  actionTypes: RMLActionTypes,
+  restClientInstance: RMLRestClientInstance,
+  options?: RMLActionCreatorsOptions
+) => RMLActionCreators;
+
+
+                                            `} />
+                                        </div>{/*//section-block*/}
+                                    </section>{/*//doc-section*/}
 
                                 </div>
                                 {/*//content-inner*/}

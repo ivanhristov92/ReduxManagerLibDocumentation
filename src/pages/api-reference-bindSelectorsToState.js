@@ -29,7 +29,35 @@ class Page extends React.Component  {
                             <div className="doc-content col-md-9 col-12 order-1">
                                 <div className="content-inner">
 
+                                    <section className="doc-section">
+                                        <h2 className="section-title">{pageTitle}</h2>
+                                        <div className="section-block">
+                                            <Code className="language-flow" code={`
+// Flow Annotations
 
+type TypicalSelector = (state: Object, ...otherArgs: Array<any>) => any;
+type StateBoundSelector = (...otherArgs: Array<any>) => any;
+
+type TypicalSelectors = {
+  [someSelector: string]: TypicalSelector | TypicalSelectors
+};
+
+type StateBoundSelectors = {
+  [someSelector: string]: StateBoundSelector | StateBoundSelectors
+};
+
+type SubStateGetter = string | ((globalState: Object) => Object);
+
+export type BindSelectorsToState = (
+  subStateGetter: SubStateGetter,
+  selectors: TypicalSelectors
+) => {
+  [someSelector: string]: StateBoundSelectors
+};
+
+                                            `} />
+                                        </div>{/*//section-block*/}
+                                    </section>{/*//doc-section*/}
                                 </div>
                                 {/*//content-inner*/}
                                 <div className="col-md-12 col-12">
