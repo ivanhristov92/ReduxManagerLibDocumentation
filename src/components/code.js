@@ -4,7 +4,7 @@ export default class Code extends React.Component {
 
     componentDidMount(){
         try {
-            window.Prism.highlightElement(this.code);
+            window.Prism.highlightAll();
         } catch (e){
         }
     }

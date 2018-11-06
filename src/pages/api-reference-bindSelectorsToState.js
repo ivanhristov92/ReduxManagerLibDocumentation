@@ -32,6 +32,59 @@ class Page extends React.Component  {
                                     <section className="doc-section">
                                         <h2 className="section-title">{pageTitle}</h2>
                                         <div className="section-block">
+                                            <h3>function bindSelectorsToState(subStateGetter, selectors) </h3>
+                                            <br/>
+                                            <div className="table-responsive">
+                                                <table className="table table-bordered">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>Name</th>
+                                                        <th>Type</th>
+                                                        <th>Default Value</th>
+                                                        <th>Flags</th>
+                                                        <th>Description</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+
+                                                    <tr>
+                                                        <th scope="row">subStateGetter</th>
+                                                        <td>string | Function (SubStateGetter)</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>Takes a piece of the global state object and uses that as the 'state' argument in a selector.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">selectors</th>
+                                                        <td>Object (TypicalSelectors)</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>An object of selector functions. Can also include nested selectors.</td>
+                                                    </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                            <h3>returns</h3>
+                                            <br/>
+                                            <div className="table-responsive">
+                                                <table className="table table-bordered">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>Type</th>
+                                                        <th>Description</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>Object (StateBoundSelectors)</td>
+                                                        <td>A dictionary of selectors that receive the correct part of the global 'state' automatically. No need for the user to pass the state argument, only any subsequent ones.</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
                                             <Code className="language-flow" code={`
 // Flow Annotations
 

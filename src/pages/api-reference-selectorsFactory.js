@@ -31,6 +31,53 @@ class Page extends React.Component  {
                                     <section className="doc-section">
                                         <h2 className="section-title">{pageTitle}</h2>
                                         <div className="section-block">
+
+                                            <h3>function selectorsFactory(options)</h3>
+                                            <br/>
+                                            <div className="table-responsive">
+                                                <table className="table table-bordered">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>Name</th>
+                                                        <th>Type</th>
+                                                        <th>Default Value</th>
+                                                        <th>Flags</th>
+                                                        <th>Description</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+
+                                                    <tr>
+                                                        <th scope="row">options</th>
+                                                        <td>Object (RMLSelectorsFactoryOptions)</td>
+                                                        <td></td>
+                                                        <td>Optional</td>
+                                                        <td>Pass additional reducer "case" functions or a custom error handler function.</td>
+                                                    </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                            <h3>returns</h3>
+                                            <br/>
+                                            <div className="table-responsive">
+                                                <table className="table table-bordered">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>Type</th>
+                                                        <th>Description</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>Object (RMLSelectors)</td>
+                                                        <td>A dictionary of functions that take the state and some additional arguments and return some derived value.</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
                                             <Code className="language-flow" code={`
 // Flow Annotations
 import type { RMLState, RMLOperationStates } from "./crud-reducer.flow";
@@ -43,15 +90,15 @@ export type RMLSelectorsFactoryOptions = {
 };
 
 export type RMLSelectors = {
-  getAll: (state: RMLState, format: "map" | "list") => Array | Object,
+  getAll: (state: RMLState, format: "map" | "list") => Array<any> | Object,
   getOne: (state: RMLState, id: string | number) => any | Object,
   getSome: (
     state: RMLState,
     ids: [string | number],
     format: "map" | "list"
-  ) => Array | Object,
+  ) => Array<any> | Object,
   getError: (state: RMLState) => ?Object,
-  getOperationStates: (state: RMLState) => RMLOperationStates,
+  getOperationStates: (state: RMLState) => RMLOperationStates | {},
   [additionalSelector: string]: (Function) => any
 };
 

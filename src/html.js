@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+
 export default class HTML extends React.Component {
   render() {
     return (
@@ -42,23 +43,23 @@ export default class HTML extends React.Component {
           {this.props.postBodyComponents}
           <script
             type="text/javascript"
-            src="assets/plugins/jquery-3.3.1.min.js"
+            src="/assets/plugins/jquery-3.3.1.min.js"
           />
           <script
             type="text/javascript"
-            src="assets/plugins/bootstrap/js/bootstrap.min.js"
+            src="/assets/plugins/bootstrap/js/bootstrap.min.js"
           />
 
-          <script src={'assets/plugins/prism/prism.js'} id={"prism"}/>
+          <script src={'/assets/plugins/prism/prism.js'} id={"prism"}/>
           <script
             type="text/javascript"
-            src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"
+            src="/assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"
           />
           <script
             type="text/javascript"
-            src="assets/plugins/stickyfill/dist/stickyfill.min.js"
+            src="/assets/plugins/stickyfill/dist/stickyfill.min.js"
           />
-          <script type="text/javascript" src="assets/js/main.js" />
+          <script type="text/javascript" src="/assets/js/main.js" />
 
         </body>
       </html>

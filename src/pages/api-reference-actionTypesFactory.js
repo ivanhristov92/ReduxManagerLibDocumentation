@@ -32,6 +32,60 @@ class Page extends React.Component  {
                                     <section className="doc-section">
                                         <h2 className="section-title">{pageTitle}</h2>
                                         <div className="section-block">
+
+
+                                            <h3>function actionTypesFactory(modelName, options)</h3>
+                                            <br/>
+                                            <div className="table-responsive">
+                                                <table className="table table-bordered">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>Name</th>
+                                                        <th>Type</th>
+                                                        <th>Default Value</th>
+                                                        <th>Flags</th>
+                                                        <th>Description</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <th scope="row">modelName</th>
+                                                        <td>string</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>The name of the model. It is prefixed to each action type.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">options</th>
+                                                        <td>Object (RMLActionTypesOptions)</td>
+                                                        <td></td>
+                                                        <td>Optional</td>
+                                                        <td>Pass additional action types or a custom error handler function.</td>
+                                                    </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                            <h3>returns</h3>
+                                            <br/>
+                                            <div className="table-responsive">
+                                                <table className="table table-bordered">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>Type</th>
+                                                        <th>Description</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>Object (RMLActionTypes)</td>
+                                                        <td>A dictionary of strings, used in action creators and reducers as action types.</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
                                             <Code className="language-flow" code={`
 // Flow Annotations
 

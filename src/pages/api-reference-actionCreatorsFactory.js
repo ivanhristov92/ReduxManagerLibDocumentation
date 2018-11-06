@@ -31,6 +31,68 @@ class Page extends React.Component  {
                                     <section className="doc-section">
                                         <h2 className="section-title">{pageTitle}</h2>
                                         <div className="section-block">
+
+
+                                            <h3>function actionCreatorsFactory(actionTypes, restClient, options) </h3>
+                                            <br/>
+                                            <div className="table-responsive">
+                                                <table className="table table-bordered">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>Name</th>
+                                                        <th>Type</th>
+                                                        <th>Default Value</th>
+                                                        <th>Flags</th>
+                                                        <th>Description</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <th scope="row">actionTypes</th>
+                                                        <td>Object (RMLActionTypes)</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>An object of strings, used inside action creators.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">restClient</th>
+                                                        <td>Object (RMLRestClientInstance)</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>An object including all CRUD ajax functions.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">options</th>
+                                                        <td>Object (RMLActionCreatorsOptions)</td>
+                                                        <td></td>
+                                                        <td>Optional</td>
+                                                        <td>Pass additional action creators or a custom error handler function.</td>
+                                                    </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                            <h3>returns</h3>
+                                            <br/>
+                                            <div className="table-responsive">
+                                                <table className="table table-bordered">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>Type</th>
+                                                        <th>Description</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>Object (RMLActionCreators)</td>
+                                                        <td>A dictionary of functions which create actions. Defaults to thunk actions - <b>they return undefined</b>.</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+
                                             <Code className="language-flow" code={`
 // Flow Annotations
 

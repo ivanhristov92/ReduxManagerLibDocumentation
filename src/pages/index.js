@@ -142,14 +142,8 @@ class IndexPage extends React.Component  {
                                             <code>npm i --save redux-manager-lib</code>
                                         </p>
                                         <p />
-                                        <div className="callout-block callout-warning">
-                                            <h4 className="callout-title">About bundling</h4>
-                                            <p>
-                                                Currently the package does not include a pre-built
-                                                version, so you need to bundle it yourself. In case you
-                                                use Webpack or some other bundler, it will become part of
-                                                your source code.
-                                            </p>
+                                        <div className="callout-block callout-success">
+                                                The first official build has been released!
                                         </div>
                                     </div>
                                     {/*//section-block*/}
